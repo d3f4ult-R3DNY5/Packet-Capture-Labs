@@ -1,2 +1,27 @@
 # Packet-Capture-Labs
-This repository showcases a collection of lab environments I built to support my networking studies, all implemented using Cisco Packet Tracer
+
+## Overview
+---
+This repository showcases a collection of lab environments I built to support my networking studies for the Cisco Certified Network Associate Certification which have been implemented using Cisco Packet Tracer
+
+## Purpose 
+---
+The purpose of this project is to build and explore networking lab scenarios as part of my ongoing learning process. Although some configurations are experimental and not strictly based on real-world designs, they help reinforce my understanding and maintain consistency in applying concepts from Jeremy's IT Lab.
+
+## Tools used 
+---
+- *Packet Tracer Version 9.0*
+- *Draw.io* : Used for creating the Logical Flow Diagrams 
+## Table of Contents 
+---
+
+
+| S.no | File Name | Date Started | Date Completed |
+| ---- | --------- | ------------ | -------------- |
+|      |           |              |                |
+
+## Credits 
+---
+Jeremy's IT Lab. (n.d.). *Jeremy’s IT Lab* [YouTube](https://www.youtube.com/@JeremysITLab) YouTube. 
+
+The labs in this repository are inspired by the content and teachings from Jeremy's IT Lab.
