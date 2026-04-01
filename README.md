@@ -21,7 +21,7 @@ The purpose of this project is to build and explore networking lab scenarios as 
 |      |           |              |                |
 
 ## Credits 
----
+
 Jeremy's IT Lab. (n.d.). *Jeremy’s IT Lab* [YouTube](https://www.youtube.com/@JeremysITLab) YouTube. 
 
 The labs in this repository are inspired by the content and teachings from Jeremy's IT Lab.
