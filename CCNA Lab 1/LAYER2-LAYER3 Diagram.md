@@ -1,1 +1,0 @@
-![](LAYER2-LAYER3-LAB1.drawio.png)

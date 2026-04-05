@@ -14,9 +14,10 @@ The main provides services to the two clients in a B2B connectivity, hosting X s
 
 ## Network Diagrams
 
-### Layer-2 - Layer-3 (Switch and Routing diagram)
+###  Connections and interfaces diagram
+![](LAYER2-Conn.drawio.png)
 
-![](LAYER2-LAYER3-LAB1.drawio.png)
+
 
 
 
