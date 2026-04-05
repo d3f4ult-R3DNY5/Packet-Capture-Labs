@@ -1,4 +1,4 @@
-# Packet-Capture-Labs
+# Packet-Tracer-Labs
 
 ## Overview
 
@@ -16,9 +16,9 @@ The purpose of this project is to build and explore networking lab scenarios as 
 
 
 
-| S.no | File Name | Date Started | Date Completed |
-| ---- | --------- | ------------ | -------------- |
-|      |           |              |                |
+| S.no | Folder Name         | Date Started | Date Completed |
+| ---- | ------------------- | ------------ | -------------- |
+| 1    | [[CCNA Mega Lab 1]] | 03/04/2026   | In Progress    |
 
 ## Credits 
 
