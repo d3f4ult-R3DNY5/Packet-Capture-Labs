@@ -24,8 +24,8 @@ The main provides services to the two clients in a B2B  connectivity, hosting X 
 
 ### IP Addressing (Layer 3)
 
-<p align="center">  
-<img src="CCNA Lab 1/IP DIAGRAM.drawio.svg"/>  
+<p align="center">
+  <img src="IP DIAGRAM.drawio.svg" />
 </p>
 
 ---
