@@ -1,4 +1,4 @@
-# CCNA Mega Lab 1
+# CCNA Lab 1
 
 > This lab was built as part of my learning process and progress  towards my CCNA journey with the resources learnt from Jeremy IT  Lab CCNA v1 (200-301) Videos Day 1 - Day 24
 
