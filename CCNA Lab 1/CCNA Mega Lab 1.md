@@ -51,7 +51,7 @@ The main provides services to the two clients in a B2B  connectivity, hosting X 
 ## Configuration Details Overview
 
 The configuration details are given in the following file 
- [[Configuration Details]]
+ [Configuration Details](Configuration%20Details.md)
 
 ---
 
