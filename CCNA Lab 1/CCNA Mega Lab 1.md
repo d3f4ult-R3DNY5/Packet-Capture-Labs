@@ -18,9 +18,10 @@ The main provides services to the two clients in a B2B  connectivity, hosting X 
 
 ### Connections and Interfaces (Layer 2)
 
-<p align="center">  
-<img src="CCNA Lab 1/LAYER2-LAYER3-LAB1.drawio.svg"/>  
+<p align="center">
+  <img src="LAYER2-LAYER3-LAB1.drawio.svg" />
 </p>
+
 ### IP Addressing (Layer 3)
 
 <p align="center">  
