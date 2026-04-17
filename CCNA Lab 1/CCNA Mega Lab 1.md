@@ -1,17 +1,31 @@
-# CCNA mega Lab 1 
+# CCNA Mega Lab 1
+
+> This lab was built as part of my learning process and progress  towards my CCNA journey with the resources learnt from Jeremy IT  Lab CCNA v1 (200-301) Videos Day 1 - Day 24
+
 ---
-This lab was built as a part of my learning process and progress towards my CCNA journey with the resources learnt from **Jeremy IT Lab CCNA v1 (200-301) Videos Day 1 -Day24**
 
-## Scenario 
+## Scenario
 Two branch offices of a WAN are connecting and communicating with each other i.e. (Branch 1 and Branch 2)
-- (Main) Branch 1 : Hosts the *IT, Maintenance, Development * Team 
-- (Clients) Branch 2 : Hosts the *Clients 1 , Clients 2*
 
-#### Assumption
-The main provides services to the two clients in a B2B connectivity, hosting X services for the clients. All of the devices connecting in a network can communicate with each other.
+- **(Main) Branch 1** — Hosts the IT, Maintenance, Development Team
+- **(Clients) Branch 2** — Hosts the Clients 1, Clients 2
+
+## Assumption
+The main provides services to the two clients in a B2B  connectivity, hosting X services for the clients. All of the  devices connecting in a network can communicate with each other.
 
 ---
 ## Network Diagrams
+
+### Connections and Interfaces (Layer 2)
+<p align="center">  
+<img src="Packet-Capture/CCNA Lab 1/LAYER2-LAYER3-LAB1.drawio.svg"/>  
+</p>
+### IP Addressing (Layer 3)
+<p align="center">  
+<img src="Packet-Capture/CCNA Lab 1/IP DIAGRAM.drawio.svg"/>  
+</p>
+
+---
 
 ## Abbreviations
 
@@ -29,30 +43,42 @@ The main provides services to the two clients in a B2B connectivity, hosting X s
 | DG           | Default Gateway            |
 | SVI          | Switched Virtual Interface |
 | VLAN         | Virtual Local Area Network |
+| CAN          | Campus Area Network        |
+| SI           | Sub Interfaces             |
 
-### Connections and interfaces diagram
-![](LAYER2-Conn.drawio.png)
+---
 
-#### Link Legend
+## Configuration Details Overview
 
-| Color | Hex | Link Type | VLANs Carried | Description |
-|-------|-----|-----------|---------------|-------------|
-| ![#FF9933](https://placehold.co/15x15/FF9933/FF9933.png) | #FF9933 | Trunk | 10, 20 | IT & MNTC — DS1/DS2 to AS1/AS2 |
-| ![#97D077](https://placehold.co/15x15/97D077/97D077.png) | #97D077 | Trunk | 20, 30 | DEV & MNTC — DS1/DS2 to AS2 |
-| ![#FF0000](https://placehold.co/15x15/FF0000/FF0000.png) | #FF0000 | Trunk | 10, 20, 30 | All VLANs — CS1 to DS1/DS2 |
-| ![#000000](https://placehold.co/15x15/000000/000000.png) | #000000 | EtherChannel | - | CS1 to IMR1 uplink |
-| ![#0000FF](https://placehold.co/15x15/0000FF/0000FF.png) | #0000FF | EtherChannel WAN | - | IMR1 to IMR2 inter-site link |
-| ![#00FFFF](https://placehold.co/15x15/00FFFF/00FFFF.png) | #00FFFF | Trunk | 40, 50 | CLIENT1 & CLIENT2 right branch |
+The configuration details are given in the following file 
+ [[Configuration Details]]
 
-#### VLAN Table
+---
 
-| VLAN ID | Name | Subnet | Branch | Switch |
-|---------|------|--------|--------|--------|
-| 10 | IT | 192.168.1.160/28 | Left | AS1 |
-| 20 | MNTC | 192.168.1.128/27 | Left | AS1, AS2 |
-| 30 | DEV | 192.168.1.0/25 | Left | AS2 |
-| 40 | CLIENT1 | 192.168.2.0/25 | Right | AS3 |
-| 50 | CLIENT2 | 192.168.2.128/25 | Right | AS3, AS4 |
-### IP diagram 
 
-![](IP%20DIAGRAM.drawio.svg)
+## Design Decisions 
+
+### In Internal Network 1
+
+- Partial Mesh in DS1/DS2 and AS1/AS2 for increased redundancy 
+- DS1 has been made as the **primary root in the Spanning Tree Protocol in VLAN 10,20,30** so that all the traffic flows through the interfaces from DS1
+- DS2 is configured to be **secondary root primary root in the Spanning Tree Protocol in VLAN 10,20,30**
+- All the ports connecting to the client Devices have been **configured with portfast so that they can instantly connect to the network and start forwarding the traffic**
+	- Since Port fast cannot prevent switches from connecting in the network all the port have been configured with BPDU guard to **prevent from connecting the switch**
+	- Root guard has been configured on DS1 and DS2 downlinks to **prevent any of the access switches from becoming the root** 
+	- Loop guard has been configured on the Distribution Switches uplinks to protect **against the unidirectional link failures**
+
+### In internal network 2
+- All the ports connecting to the client Devices have been **configured with portfast so that they can instantly connect to the network and start forwarding the traffic**
+	- Since Port fast cannot prevent switches from connecting in the network all the port have been configured with BPDU guard to **prevent from connecting the switch**
+- AS3 and AS4 form an ether channel using 4 interfaces
+- AS4 has been configured as a trunk port to CR1 and AS3
+- CR1 has been configured with Router on a stick to perform inter VLAN routing
+
+
+## External Network 
+- Routers CR1 and CR2 are used to perform routing between the internal networks and also routing the addresses outside the networks 
+
+---
+
+
