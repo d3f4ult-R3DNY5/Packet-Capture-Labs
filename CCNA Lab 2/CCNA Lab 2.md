@@ -5,14 +5,32 @@
 
 ## Scenario 
 
-For now it is in Phase 1 
-- Planned 3 phases for 3 different routes 
-- This is Supposed to be the New York side branch that is responsible  producing and testing the product 
-- So they have to work together in collaboration with each other 
+For Phase 1 
+- changes in Plan 1 : this is the main branch no New York bunch : idea has been put on hold for now  
+- Consideration in mind : Moving the DNS server to a central location possibly when the NTP server is residing 
+
+For Phase 2 
+- Plan is FTP servers that the Production and testing department can use 
+- External FTP server for external clients (may involve using static NAT or PAT for communications)
+
+>[!NOTE]
+>#### Updates Design
+>- IT branch with SNMP server, Syslog server 
+>- Core connectivity design 
+>- Client Connectivity Design 
+
+
 
 ---
-## LAYOUT (Iteration 1)
+## LAYOUT (Phase 1)
 
 <p align="center">
   <img src="Phase 1.drawio.svg" />
+</p>
+
+
+## LAYOUT (Phase 2)
+
+<p align="center">
+  <img src="Phase 2.drawio.svg" />
 </p>
