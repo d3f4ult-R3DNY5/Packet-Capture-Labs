@@ -5,32 +5,42 @@
 
 ## Scenario 
 
-For Phase 1 
-- changes in Plan 1 : this is the main branch no New York bunch : idea has been put on hold for now  
-- Consideration in mind : Moving the DNS server to a central location possibly when the NTP server is residing 
+**NetFlow Solutions — New York Office**
 
-For Phase 2 
-- Plan is FTP servers that the Production and testing department can use 
-- External FTP server for external clients (may involve using static NAT or PAT for communications)
+NetFlow Solutions is a growing tech company that has opened a new office in New York. You are the network engineer responsible for building their office network from the ground up.
 
->[!NOTE]
->#### Updates Design
->- IT branch with SNMP server, Syslog server 
->- Core connectivity design 
->- Client Connectivity Design 
+The office has two departments which is under the Development Team:
+
+- **Production** — the main engineering team. They need a stable and reliable network at all times.
+- **Testing** — the dev and QA team. They need to be isolated from Production so their work doesn't affect it.
+
+Each department has its own file server for internal use. There is also a file server for external clients to access remotely.
+
+All devices get their IP addresses automatically from a central DHCP server. A central DNS server handles name resolution. All device clocks are synced via a central NTP server.
+
+The network is monitored by an IT management team who use a Syslog server and SNMP manager to keep track of everything happening across the network.
+
+The network is built with redundancy in mind — no single device failure should take the whole network down.
 
 
 
 ---
-## LAYOUT (Phase 1)
+## LAYOUT 1 (Development Teams)
 
 <p align="center">
-  <img src="Phase 1.drawio.svg" />
+  <img src="Development-Team.drawio.svg" />
 </p>
 
 
-## LAYOUT (Phase 2)
+## LAYOUT 2 (FTP Servers)
 
 <p align="center">
-  <img src="Phase 2.drawio.svg" />
+  <img src="FTP.drawio.svg" />
 </p>
+
+## LAYOUT 4 (IT Team)
+
+<p align="center">
+  <img src="IT.drawio.svg" />
+</p>
+
