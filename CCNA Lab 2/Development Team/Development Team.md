@@ -2,6 +2,5 @@
 
 ## Diagram 
 
-<p align="center">
-  <img src="../Development-Team.drawio.svg" />
-</p>
+![Development Team](Development-Team.drawio.svg)
+
