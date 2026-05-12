@@ -2,5 +2,5 @@
 
 ## Diagram 
 
-![Development Team](Development-Team.drawio.svg)
+![Development Team](../Development-Team.drawio.svg)
 
