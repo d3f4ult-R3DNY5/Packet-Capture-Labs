@@ -57,3 +57,9 @@ The network is built with redundancy in mind — no single device failure should
   <img src="FINAL.drawio.svg" />
 </p>
 
+---
+## Implementation 
+
+>[!NOTE]
+>#### Phase wise Implementation of the diagram 
+>1. [Development Team](Development%20Team/Development%20Team.md)
