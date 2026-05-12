@@ -44,3 +44,16 @@ The network is built with redundancy in mind — no single device failure should
   <img src="IT.drawio.svg" />
 </p>
 
+## LAYOUT 5 (CORE  Network)
+
+<p align="center">
+  <img src="CORE.drawio.svg" />
+</p>
+
+
+## FINAL DIAGRAM 
+
+<p align="center">
+  <img src="FINAL.drawio.svg" />
+</p>
+
